@@ -31,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Header mejorado */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -60,7 +60,7 @@ body {
   font-size: 1.8rem;
 }
 
-/* Navegación mejorada */
+/* Navegación */
 .navbar {
   display: flex;
   align-items: center;
@@ -184,6 +184,69 @@ body {
   font-size: 0.9rem;
 }
 
+/* Botón "Ver Participantes" */
+.contest-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-elegant-red) 100%);
+  color: var(--color-dark);
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(196, 167, 125, 0.3);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contest-button .button-text {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+.contest-button .button-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.contest-button .button-hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-elegant-red) 0%, var(--color-primary) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.contest-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(210, 63, 87, 0.4);
+}
+
+.contest-button:hover .button-hover-effect {
+  opacity: 1;
+}
+
+.contest-button:hover .button-icon {
+  transform: rotate(15deg) scale(1.2);
+}
+
+.contest-button:active {
+  transform: translateY(1px);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header {
@@ -241,33 +304,13 @@ body {
     font-size: 0.8rem;
   }
 }
-/* Estilos base (móviles primero) */
-.elemento {
-  font-size: 14px;
-}
 
-/* Tablet */
-@media (min-width: 768px) {
-  .elemento {
-    font-size: 16px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 992px) {
-  .elemento {
-    font-size: 18px;
-  }
-}
-
-/* Añade esto al final de tu style.css */
-/* Mejoras de responsividad */
+/* Utilidades */
 .container {
   width: 100%;
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 img {
@@ -276,36 +319,28 @@ img {
   display: block;
 }
 
-/* Evitar desbordamiento horizontal */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
+/* Iconos de contacto */
+.contact-icons {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
 }
 
-/* Mejoras para móviles */
-@media (max-width: 767px) {
-  :root {
-    font-size: 14px;
-  }
-  
-  .header {
-    padding: 10px 5%;
-  }
-  
-  .navbar a {
-    margin-left: 15px;
-    font-size: 0.9rem;
-  }
+.contact-icons a {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
+.contact-icons a:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
 
-.contact-icons a:nth-child(1) { color: #25D366; } /* WhatsApp verde */
-.contact-icons a:nth-child(2) { color: #EA4335; } /* Gmail rojo */
+.contact-icons a:nth-child(1) { 
+  color: #25D366; /* WhatsApp verde */
+}
 
-/* Estilos para móvil */
-@media (max-width: 768px) {
-    .contact-icons {
-        margin-left: 0;
-        gap: 10px;
-    }
+.contact-icons a:nth-child(2) { 
+  color: #EA4335; /* Gmail rojo */ 
 }
