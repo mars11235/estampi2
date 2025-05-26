@@ -297,3 +297,15 @@ html, body {
     font-size: 0.9rem;
   }
 }
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-link::before {
+    content: "\f0e0"; /* Icono de correo (Font Awesome) */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
