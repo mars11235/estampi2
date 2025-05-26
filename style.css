@@ -298,14 +298,14 @@ html, body {
   }
 }
 
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
 
-.contact-link::before {
-    content: "\f0e0"; /* Icono de correo (Font Awesome) */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+.contact-icons a:nth-child(1) { color: #25D366; } /* WhatsApp verde */
+.contact-icons a:nth-child(2) { color: #EA4335; } /* Gmail rojo */
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+    .contact-icons {
+        margin-left: 0;
+        gap: 10px;
+    }
 }
