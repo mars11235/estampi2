@@ -344,3 +344,15 @@ img {
 .contact-icons a:nth-child(2) { 
   color: #EA4335; /* Gmail rojo */ 
 }
+.winner-prize {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.winner-prize p {
+    margin: 0;
+}
